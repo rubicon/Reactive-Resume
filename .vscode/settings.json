@@ -1,25 +1,15 @@
 {
-  "css.validate": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml",
+    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": [
+      "tools/compose/*"
+    ]
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.wordWrap": "on",
-  "eslint.workingDirectories": [
-    "schema",
-    "client",
-    "server"
-  ],
-  "i18n-ally.enabledFrameworks": [
-    "react"
-  ],
-  "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": [
-    "client/public/locales"
-  ],
-  "i18n-ally.namespace": true,
-  "i18n-ally.pathMatcher": "{locale}/{namespaces}.{ext}",
-  "i18n-ally.sortKeys": true,
-  "scss.validate": false
+  "i18n-ally.localesPaths": ["apps/client/src/locales"],
+  "vitest.disableWorkspaceWarning": true
 }
